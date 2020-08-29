@@ -1,0 +1,13 @@
+D:\CProjects\MessengerAppServer\MessengerAppServer\bin\Debug\netcoreapp3.1\MessengerAppServer.exe
+D:\CProjects\MessengerAppServer\MessengerAppServer\bin\Debug\netcoreapp3.1\MessengerAppServer.deps.json
+D:\CProjects\MessengerAppServer\MessengerAppServer\bin\Debug\netcoreapp3.1\MessengerAppServer.runtimeconfig.json
+D:\CProjects\MessengerAppServer\MessengerAppServer\bin\Debug\netcoreapp3.1\MessengerAppServer.runtimeconfig.dev.json
+D:\CProjects\MessengerAppServer\MessengerAppServer\bin\Debug\netcoreapp3.1\MessengerAppServer.dll
+D:\CProjects\MessengerAppServer\MessengerAppServer\bin\Debug\netcoreapp3.1\MessengerAppServer.pdb
+D:\CProjects\MessengerAppServer\MessengerAppServer\obj\Debug\netcoreapp3.1\MessengerAppServer.csprojAssemblyReference.cache
+D:\CProjects\MessengerAppServer\MessengerAppServer\obj\Debug\netcoreapp3.1\MessengerAppServer.AssemblyInfoInputs.cache
+D:\CProjects\MessengerAppServer\MessengerAppServer\obj\Debug\netcoreapp3.1\MessengerAppServer.AssemblyInfo.cs
+D:\CProjects\MessengerAppServer\MessengerAppServer\obj\Debug\netcoreapp3.1\MessengerAppServer.csproj.CoreCompileInputs.cache
+D:\CProjects\MessengerAppServer\MessengerAppServer\obj\Debug\netcoreapp3.1\MessengerAppServer.dll
+D:\CProjects\MessengerAppServer\MessengerAppServer\obj\Debug\netcoreapp3.1\MessengerAppServer.pdb
+D:\CProjects\MessengerAppServer\MessengerAppServer\obj\Debug\netcoreapp3.1\MessengerAppServer.genruntimeconfig.cache
