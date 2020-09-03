@@ -6,6 +6,7 @@ using System.Net.Sockets;
 using System;
 using UnityEngine.SceneManagement;
 using System.Text;
+using System.Text.RegularExpressions;
 
 public class Client : MonoBehaviour
 {
@@ -25,7 +26,9 @@ public class Client : MonoBehaviour
     private delegate void PacketHandler(Packet _packet);
     private static Dictionary<int, PacketHandler> packetHandlers;
 
-
+    /// <summary>
+    /// Initialize Singleton
+    /// </summary>
     private void Awake()
     {
         if (instance == null)
@@ -52,11 +55,21 @@ public class Client : MonoBehaviour
 
     public void ConnectToServer(string _username,string ipAddress = "",string _port = "")
     {
+
+
         username = _username;
+        
         if (ipAddress != "")
         {
-            ip = ipAddress;
-            port = int.Parse(_port);
+            try
+            {
+                ip = ipAddress;
+                port = int.Parse(_port);
+            }
+            catch
+            {
+                port = 1;
+            }
         }
 
         InitializeClientData();
@@ -93,6 +106,10 @@ public class Client : MonoBehaviour
 
         }
 
+        /// <summary>
+        /// Called once we connected to the server or failed to connect
+        /// </summary>
+        /// <param name="_result"></param>
         private void ConnectCallback(IAsyncResult _result)
         {
             socket.EndConnect(_result);
@@ -105,12 +122,15 @@ public class Client : MonoBehaviour
             stream = socket.GetStream();
             receivedData = new Packet();
 
-
+            // Start listening for information from the server
             stream.BeginRead(receiveBuffer, 0, dataBufferSize, ReceiveCallback, null);
 
         }
 
-
+        /// <summary>
+        /// Send packet to server
+        /// </summary>
+        /// <param name="_packet">packet to send</param>
         public void SendData(Packet _packet)
         {
             try
@@ -127,6 +147,10 @@ public class Client : MonoBehaviour
             }
         }
 
+        /// <summary>
+        /// Called when we receive information from the server
+        /// </summary>
+        /// <param name="_result"></param>
         private void ReceiveCallback(IAsyncResult _result)
         {
             try
@@ -151,7 +175,11 @@ public class Client : MonoBehaviour
             }
         }
 
-
+        /// <summary>
+        /// Determines whether a full packet was received
+        /// </summary>
+        /// <param name="_data"></param>
+        /// <returns></returns>
         private bool HandleData(byte[] _data)
         {
             int _packetLength = 0;
@@ -215,6 +243,9 @@ public class Client : MonoBehaviour
 
     }
 
+
+
+    /// <summary> Initalize the packet handlers so that we can properly handle information sent from server. </summary>
     private void InitializeClientData()
     {
         packetHandlers = new Dictionary<int, PacketHandler>()
@@ -228,6 +259,11 @@ public class Client : MonoBehaviour
         Debug.Log("Initialized packets.");
     }
 
+    /// <summary>
+    /// Send packet to server requesting to add a message to the chat
+    /// </summary>
+    /// <param name="msg"> the message to send</param>
+    /// <returns></returns>
     public bool SendMessageToChat(string msg)
     {
         if (Time.time - lastMessageSentTime >= messageSendDelay)
@@ -240,12 +276,19 @@ public class Client : MonoBehaviour
         return false;
     }
 
+    /// <summary>
+    /// Start the connection delay routine.
+    /// </summary>
     public void StartConnectionDelayRoutine()
     {
         StopAllCoroutines();
         StartCoroutine(ConnectionDelayRoutine());
     }
 
+    /// <summary>
+    /// If we haven't connected to the server after two seconds, we probably will never connect
+    /// </summary>
+    /// <returns></returns>
     public IEnumerator ConnectionDelayRoutine()
     {
         yield return new WaitForSeconds(2f);
@@ -272,11 +315,15 @@ public class Client : MonoBehaviour
         {
             
             Disconnect();
-            ClientSend.ChatterLeftChat(myId);
             AppManager.chatters.Clear();
         }
     }
 
+
+    /// <summary>
+    /// Disconnect from the server
+    /// </summary>
+    /// <param name="loadMainMenu">whether we should load the main menu</param>
     private void Disconnect(bool loadMainMenu = true)
     {
         if (isConnected)
@@ -300,8 +347,4 @@ public class Client : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        
-    }
 }

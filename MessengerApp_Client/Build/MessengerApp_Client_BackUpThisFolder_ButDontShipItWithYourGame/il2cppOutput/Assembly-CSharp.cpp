@@ -181,6 +181,8 @@ struct MainMenuManager_tDBD5166F1EA9FA6F0265945A01CD3640E98BE54E;
 struct U3CErrorMessageRoutineU3Ed__10_t25E136F38424182166A07FAEC492B49C83577B30;
 // Packet
 struct Packet_t1E53F0D13B7D0173F081C6F5BE477B40F7CEB300;
+// QuitSceneScript
+struct QuitSceneScript_t188D05EF920036DB3936DF8F1B9B8FC844226DC6;
 // System.Action
 struct Action_t591D2A86165F896B4B800BB5C25CE18672A55579;
 // System.Action[]
@@ -477,7 +479,6 @@ IL2CPP_EXTERN_C const uint32_t ClientHandle_ChatterDisconnected_mEAA094ACAF4B8D9
 IL2CPP_EXTERN_C const uint32_t ClientHandle_SendMessage_mE6E84D68653AB68B619FF259B014A6627F36323B_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t ClientHandle_ServerChatMessage_mF165139A32FCAB1C3CC90BF8D9194123A70D9231_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t ClientHandle_Welcome_m8C4698581EA032CAC46848214787303A204A6113_MetadataUsageId;
-IL2CPP_EXTERN_C const uint32_t ClientSend_ChatterLeftChat_mD44C0C2585D18D3A72AE73B00CA4CB5B252F7CA7_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t ClientSend_ChatterMessage_m59CAED306EAC0C36CFC1A13A85321B67C20D577C_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t ClientSend_SendTCPData_m8860E5087FC46ABA82A7363411C9EA7D95694848_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t ClientSend_WelcomeReceived_m992A6A9FBAC5F28B4549A68AA94D3EA353ACE43B_MetadataUsageId;
@@ -3888,6 +3889,15 @@ public:
 };
 
 
+// QuitSceneScript
+struct  QuitSceneScript_t188D05EF920036DB3936DF8F1B9B8FC844226DC6  : public MonoBehaviour_t4A60845CF505405AF8BE8C61CC07F75CADEF6429
+{
+public:
+
+public:
+};
+
+
 // ThreadManager
 struct  ThreadManager_t5024AC411B175D5112CC7ED2F813563D43FC7CC5  : public MonoBehaviour_t4A60845CF505405AF8BE8C61CC07F75CADEF6429
 {
@@ -5263,6 +5273,8 @@ inline void Dictionary_2_Add_m2E345756EE14C412B1C3888CAB80D1CDBD891CBE (Dictiona
 {
 	((  void (*) (Dictionary_2_tB7113CE6F90D0417D12BEAED7A941011484EC21E *, int32_t, ChatterManager_tCE8F3DB174BAD6536896A2084B7B2777C72E0CA5 *, const RuntimeMethod*))Dictionary_2_Add_mF7AEA0EFA07EEBC1A4B283A26A7CB720EE7A4C20_gshared)(__this, ___key0, ___value1, method);
 }
+// System.Void UnityEngine.Application::Quit()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Application_Quit_mA005EB22CB989AC3794334754F15E1C0D2FF1C95 (const RuntimeMethod* method);
 // System.Void UnityEngine.MonoBehaviour::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_mEAEC84B222C60319D593E456D769B3311DFCEF97 (MonoBehaviour_t4A60845CF505405AF8BE8C61CC07F75CADEF6429 * __this, const RuntimeMethod* method);
 // System.Void System.Collections.Generic.Dictionary`2<System.Int32,ChatterManager>::.ctor()
@@ -5308,8 +5320,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Client_ConnectionDelayRoutine_
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Coroutine_tAE7DB2FC70A0AE6477F896F852057CB0754F06EC * MonoBehaviour_StartCoroutine_mBF8044CE06A35D76A69669ADD8977D05956616B7 (MonoBehaviour_t4A60845CF505405AF8BE8C61CC07F75CADEF6429 * __this, RuntimeObject* ___routine0, const RuntimeMethod* method);
 // System.Void Client/<ConnectionDelayRoutine>d__20::.ctor(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CConnectionDelayRoutineU3Ed__20__ctor_mF511FBC6CAA7FFF1BAFD6837C54450EADF95FD4D (U3CConnectionDelayRoutineU3Ed__20_tEC6D4E2BD62C4025CD72AF754472E8EF996F661F * __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method);
-// System.Void ClientSend::ChatterLeftChat(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClientSend_ChatterLeftChat_mD44C0C2585D18D3A72AE73B00CA4CB5B252F7CA7 (int32_t ____fromClient0, const RuntimeMethod* method);
 // System.Void System.Collections.Generic.Dictionary`2<System.Int32,ChatterManager>::Clear()
 inline void Dictionary_2_Clear_mC0A5F80EF68F4E7C52CF13144E2653F90A931AAF (Dictionary_2_tB7113CE6F90D0417D12BEAED7A941011484EC21E * __this, const RuntimeMethod* method)
 {
@@ -5773,6 +5783,16 @@ IL_003b:
 		return;
 	}
 }
+// System.Void AppManager::Quit()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppManager_Quit_m573E6C4D769B74E73719E6F8D75E8E3410FFF2C1 (AppManager_t29303F272B8609F34BDE50F71B86B45F1471AE8E * __this, const RuntimeMethod* method)
+{
+	{
+		// Application.Quit();
+		Application_Quit_mA005EB22CB989AC3794334754F15E1C0D2FF1C95(/*hidden argument*/NULL);
+		// }
+		return;
+	}
+}
 // System.Void AppManager::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppManager__ctor_m44C656B4E2A0D185460CC852C23404B9C0A0693D (AppManager_t29303F272B8609F34BDE50F71B86B45F1471AE8E * __this, const RuntimeMethod* method)
 {
@@ -5931,6 +5951,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Client_ConnectToServer_mAC1D35D5C758FAA0
 		il2cpp_codegen_initialize_method (Client_ConnectToServer_mAC1D35D5C758FAA05593EA7B61309D778CEFA3C4_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
+	Exception_t * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	void* __leave_targets_storage = alloca(sizeof(int32_t) * 2);
+	il2cpp::utils::LeaveTargetStack __leave_targets(__leave_targets_storage);
+	NO_UNUSED_WARNING (__leave_targets);
 	{
 		// username = _username;
 		String_t* L_0 = ____username0;
@@ -5940,10 +5967,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Client_ConnectToServer_mAC1D35D5C758FAA0
 		bool L_2 = String_op_Inequality_m0BD184A74F453A72376E81CC6CAEE2556B80493E(L_1, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, /*hidden argument*/NULL);
 		if (!L_2)
 		{
-			goto IL_0027;
+			goto IL_0033;
 		}
 	}
-	{
+
+IL_0014:
+	try
+	{ // begin try (depth: 1)
 		// ip = ipAddress;
 		String_t* L_3 = ___ipAddress1;
 		__this->set_ip_6(L_3);
@@ -5951,9 +5981,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Client_ConnectToServer_mAC1D35D5C758FAA0
 		String_t* L_4 = ____port2;
 		int32_t L_5 = Int32_Parse_m5807B6243415790250FC25168F767C08FC16FDEA(L_4, /*hidden argument*/NULL);
 		__this->set_port_7(L_5);
+		// }
+		goto IL_0033;
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__exception_local = (Exception_t *)e.ex;
+		if(il2cpp_codegen_class_is_assignable_from (RuntimeObject_il2cpp_TypeInfo_var, il2cpp_codegen_object_class(e.ex)))
+			goto CATCH_0029;
+		throw e;
 	}
 
-IL_0027:
+CATCH_0029:
+	{ // begin catch(System.Object)
+		// catch
+		// port = 1;
+		__this->set_port_7(1);
+		// }
+		goto IL_0033;
+	} // end catch (depth: 1)
+
+IL_0033:
 	{
 		// InitializeClientData();
 		Client_InitializeClientData_mEA5832E34B1FB2C79B160B7BBD3EC8060B8EC42D(__this, /*hidden argument*/NULL);
@@ -6096,23 +6144,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Client_LeaveChat_m40E675899B58CDA799F99C
 		bool L_0 = __this->get_isConnected_13();
 		if (!L_0)
 		{
-			goto IL_0024;
+			goto IL_0019;
 		}
 	}
 	{
 		// Disconnect();
 		Client_Disconnect_m786D8D2A837580AD0E29CDFCDD7A54DBE21202DA(__this, (bool)1, /*hidden argument*/NULL);
-		// ClientSend.ChatterLeftChat(myId);
-		int32_t L_1 = __this->get_myId_8();
-		ClientSend_ChatterLeftChat_mD44C0C2585D18D3A72AE73B00CA4CB5B252F7CA7(L_1, /*hidden argument*/NULL);
 		// AppManager.chatters.Clear();
 		IL2CPP_RUNTIME_CLASS_INIT(AppManager_t29303F272B8609F34BDE50F71B86B45F1471AE8E_il2cpp_TypeInfo_var);
-		Dictionary_2_tB7113CE6F90D0417D12BEAED7A941011484EC21E * L_2 = ((AppManager_t29303F272B8609F34BDE50F71B86B45F1471AE8E_StaticFields*)il2cpp_codegen_static_fields_for(AppManager_t29303F272B8609F34BDE50F71B86B45F1471AE8E_il2cpp_TypeInfo_var))->get_chatters_5();
-		NullCheck(L_2);
-		Dictionary_2_Clear_mC0A5F80EF68F4E7C52CF13144E2653F90A931AAF(L_2, /*hidden argument*/Dictionary_2_Clear_mC0A5F80EF68F4E7C52CF13144E2653F90A931AAF_RuntimeMethod_var);
+		Dictionary_2_tB7113CE6F90D0417D12BEAED7A941011484EC21E * L_1 = ((AppManager_t29303F272B8609F34BDE50F71B86B45F1471AE8E_StaticFields*)il2cpp_codegen_static_fields_for(AppManager_t29303F272B8609F34BDE50F71B86B45F1471AE8E_il2cpp_TypeInfo_var))->get_chatters_5();
+		NullCheck(L_1);
+		Dictionary_2_Clear_mC0A5F80EF68F4E7C52CF13144E2653F90A931AAF(L_1, /*hidden argument*/Dictionary_2_Clear_mC0A5F80EF68F4E7C52CF13144E2653F90A931AAF_RuntimeMethod_var);
 	}
 
-IL_0024:
+IL_0019:
 	{
 		// }
 		return;
@@ -6188,14 +6233,6 @@ IL_004b:
 	}
 
 IL_0050:
-	{
-		// }
-		return;
-	}
-}
-// System.Void Client::Update()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Client_Update_m7C7762C5B84EE03CE924D6E3E057EB31836B7155 (Client_t389DCCED9C151BDE955CFE61AC8ECD0A3B3AD92E * __this, const RuntimeMethod* method)
-{
 	{
 		// }
 		return;
@@ -7626,84 +7663,6 @@ IL_0020:
 		return;
 	}
 }
-// System.Void ClientSend::ChatterLeftChat(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClientSend_ChatterLeftChat_mD44C0C2585D18D3A72AE73B00CA4CB5B252F7CA7 (int32_t ____fromClient0, const RuntimeMethod* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (ClientSend_ChatterLeftChat_mD44C0C2585D18D3A72AE73B00CA4CB5B252F7CA7_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	Packet_t1E53F0D13B7D0173F081C6F5BE477B40F7CEB300 * V_0 = NULL;
-	Exception_t * __last_unhandled_exception = 0;
-	NO_UNUSED_WARNING (__last_unhandled_exception);
-	Exception_t * __exception_local = 0;
-	NO_UNUSED_WARNING (__exception_local);
-	void* __leave_targets_storage = alloca(sizeof(int32_t) * 1);
-	il2cpp::utils::LeaveTargetStack __leave_targets(__leave_targets_storage);
-	NO_UNUSED_WARNING (__leave_targets);
-	{
-		// using (Packet _packet = new Packet((int)ClientPackets.chatterLeftChat))
-		Packet_t1E53F0D13B7D0173F081C6F5BE477B40F7CEB300 * L_0 = (Packet_t1E53F0D13B7D0173F081C6F5BE477B40F7CEB300 *)il2cpp_codegen_object_new(Packet_t1E53F0D13B7D0173F081C6F5BE477B40F7CEB300_il2cpp_TypeInfo_var);
-		Packet__ctor_mE17B36999C59AB6F5F7154DD0DCC51ACB8086283(L_0, 3, /*hidden argument*/NULL);
-		V_0 = L_0;
-	}
-
-IL_0007:
-	try
-	{ // begin try (depth: 1)
-		// _packet.Write(_fromClient);
-		Packet_t1E53F0D13B7D0173F081C6F5BE477B40F7CEB300 * L_1 = V_0;
-		int32_t L_2 = ____fromClient0;
-		NullCheck(L_1);
-		Packet_Write_mF244C88FB1FC5BF1501CDA3344D0B6B7D9D5D9E7(L_1, L_2, /*hidden argument*/NULL);
-		// SendTCPData(_packet);
-		Packet_t1E53F0D13B7D0173F081C6F5BE477B40F7CEB300 * L_3 = V_0;
-		ClientSend_SendTCPData_m8860E5087FC46ABA82A7363411C9EA7D95694848(L_3, /*hidden argument*/NULL);
-		// }
-		IL2CPP_LEAVE(0x20, FINALLY_0016);
-	} // end try (depth: 1)
-	catch(Il2CppExceptionWrapper& e)
-	{
-		__last_unhandled_exception = (Exception_t *)e.ex;
-		goto FINALLY_0016;
-	}
-
-FINALLY_0016:
-	{ // begin finally (depth: 1)
-		{
-			Packet_t1E53F0D13B7D0173F081C6F5BE477B40F7CEB300 * L_4 = V_0;
-			if (!L_4)
-			{
-				goto IL_001f;
-			}
-		}
-
-IL_0019:
-		{
-			Packet_t1E53F0D13B7D0173F081C6F5BE477B40F7CEB300 * L_5 = V_0;
-			NullCheck(L_5);
-			InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t7218B22548186B208D65EA5B7870503810A2D15A_il2cpp_TypeInfo_var, L_5);
-		}
-
-IL_001f:
-		{
-			IL2CPP_END_FINALLY(22)
-		}
-	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(22)
-	{
-		IL2CPP_JUMP_TBL(0x20, IL_0020)
-		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
-	}
-
-IL_0020:
-	{
-		// }
-		return;
-	}
-}
 // System.Void ClientSend::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClientSend__ctor_m11924BB49415ECBE8B4A75D1DAE529F076259743 (ClientSend_t37DDF4910F177D0C5F8CCFC7A627BA7116B6CE2E * __this, const RuntimeMethod* method)
 {
@@ -7764,14 +7723,6 @@ IL_0014:
 	}
 
 IL_0027:
-	{
-		// }
-		return;
-	}
-}
-// System.Void MainManager::Start()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainManager_Start_m8C8B2C52586187CC28AC48D68D5728C657EA8D36 (MainManager_t0AC3A0DA6271C2284C0EE313D4A2F13A4B8981E3 * __this, const RuntimeMethod* method)
-{
 	{
 		// }
 		return;
@@ -9544,6 +9495,32 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Packet_Dispose_m3953F04BBEC83B548F3194AB
 		IL2CPP_RUNTIME_CLASS_INIT(GC_tC1D7BD74E8F44ECCEF5CD2B5D84BFF9AAE02D01D_il2cpp_TypeInfo_var);
 		GC_SuppressFinalize_m037319A9B95A5BA437E806DE592802225EE5B425(__this, /*hidden argument*/NULL);
 		// }
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void QuitSceneScript::Quit()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QuitSceneScript_Quit_m2329DC4E6138F9E3BE93B2A270CF255FB13828D7 (QuitSceneScript_t188D05EF920036DB3936DF8F1B9B8FC844226DC6 * __this, const RuntimeMethod* method)
+{
+	{
+		// Application.Quit();
+		Application_Quit_mA005EB22CB989AC3794334754F15E1C0D2FF1C95(/*hidden argument*/NULL);
+		// }
+		return;
+	}
+}
+// System.Void QuitSceneScript::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QuitSceneScript__ctor_mBE3A27044B54D181D22F9309EB6664436B52E147 (QuitSceneScript_t188D05EF920036DB3936DF8F1B9B8FC844226DC6 * __this, const RuntimeMethod* method)
+{
+	{
+		MonoBehaviour__ctor_mEAEC84B222C60319D593E456D769B3311DFCEF97(__this, /*hidden argument*/NULL);
 		return;
 	}
 }

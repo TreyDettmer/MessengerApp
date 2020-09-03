@@ -4,6 +4,14 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 
+/*
+ * Besides some added client packets and server packets, this is all Tom Weiland's code.
+ */
+
+
+
+
+
 /// <summary>Sent from server to client.</summary>
 public enum ServerPackets
 {
@@ -18,8 +26,7 @@ public enum ServerPackets
 public enum ClientPackets
 {
     welcomeReceived = 1,
-    chatterMessage,
-    chatterLeftChat
+    chatterMessage
 }
 
 public class Packet : IDisposable

@@ -18,8 +18,7 @@ namespace MessengerAppServer
     public enum ClientPackets
     {
         welcomeReceived = 1,
-        chatterMessage,
-        chatterLeftChat
+        chatterMessage
     }
 
     public class Packet : IDisposable

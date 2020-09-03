@@ -6,6 +6,7 @@ using UnityEngine;
 
 /*
  *  This class is directly copied from Tom Weiland's tutorial.
+ *  It is used to force code to run on a single thread.
  */
 
 public class ThreadManager : MonoBehaviour

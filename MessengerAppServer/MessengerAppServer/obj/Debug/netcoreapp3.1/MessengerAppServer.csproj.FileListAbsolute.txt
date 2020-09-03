@@ -11,3 +11,16 @@ D:\CProjects\MessengerAppServer\MessengerAppServer\obj\Debug\netcoreapp3.1\Messe
 D:\CProjects\MessengerAppServer\MessengerAppServer\obj\Debug\netcoreapp3.1\MessengerAppServer.dll
 D:\CProjects\MessengerAppServer\MessengerAppServer\obj\Debug\netcoreapp3.1\MessengerAppServer.pdb
 D:\CProjects\MessengerAppServer\MessengerAppServer\obj\Debug\netcoreapp3.1\MessengerAppServer.genruntimeconfig.cache
+D:\UnityProjects\MessengerApp\MessengerAppServer\MessengerAppServer\bin\Debug\netcoreapp3.1\MessengerAppServer.exe
+D:\UnityProjects\MessengerApp\MessengerAppServer\MessengerAppServer\bin\Debug\netcoreapp3.1\MessengerAppServer.deps.json
+D:\UnityProjects\MessengerApp\MessengerAppServer\MessengerAppServer\bin\Debug\netcoreapp3.1\MessengerAppServer.runtimeconfig.json
+D:\UnityProjects\MessengerApp\MessengerAppServer\MessengerAppServer\bin\Debug\netcoreapp3.1\MessengerAppServer.runtimeconfig.dev.json
+D:\UnityProjects\MessengerApp\MessengerAppServer\MessengerAppServer\bin\Debug\netcoreapp3.1\MessengerAppServer.dll
+D:\UnityProjects\MessengerApp\MessengerAppServer\MessengerAppServer\bin\Debug\netcoreapp3.1\MessengerAppServer.pdb
+D:\UnityProjects\MessengerApp\MessengerAppServer\MessengerAppServer\obj\Debug\netcoreapp3.1\MessengerAppServer.csprojAssemblyReference.cache
+D:\UnityProjects\MessengerApp\MessengerAppServer\MessengerAppServer\obj\Debug\netcoreapp3.1\MessengerAppServer.AssemblyInfoInputs.cache
+D:\UnityProjects\MessengerApp\MessengerAppServer\MessengerAppServer\obj\Debug\netcoreapp3.1\MessengerAppServer.AssemblyInfo.cs
+D:\UnityProjects\MessengerApp\MessengerAppServer\MessengerAppServer\obj\Debug\netcoreapp3.1\MessengerAppServer.csproj.CoreCompileInputs.cache
+D:\UnityProjects\MessengerApp\MessengerAppServer\MessengerAppServer\obj\Debug\netcoreapp3.1\MessengerAppServer.dll
+D:\UnityProjects\MessengerApp\MessengerAppServer\MessengerAppServer\obj\Debug\netcoreapp3.1\MessengerAppServer.pdb
+D:\UnityProjects\MessengerApp\MessengerAppServer\MessengerAppServer\obj\Debug\netcoreapp3.1\MessengerAppServer.genruntimeconfig.cache

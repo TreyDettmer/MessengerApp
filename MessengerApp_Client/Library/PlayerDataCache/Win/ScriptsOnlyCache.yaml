@@ -7,6 +7,7 @@ ScriptsOnlyBuild:
     - Client
     - MainManager
     - MainMenuManager
+    - QuitSceneScript
     - ThreadManager
     Unity.RenderPipelines.Core.Runtime.dll:
     - UnityEngine.Rendering.UI.DebugUIHandlerBitField
@@ -242,6 +243,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14832}
     - Class: 114
       Script: {instanceID: 14838}
+    - Class: 114
+      Script: {instanceID: 20072}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1117,8 +1120,14 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: QuitSceneScript
   platform: 5
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Main.unity
-  playerPath: D:/UnityProjects/MultiplayerGame/MessengerApp_Client/Build/MessengerApp_Client.exe
+  playerPath: D:/UnityProjects/MessengerApp/MessengerApp_Client/Build/MessengerApp_Client.exe

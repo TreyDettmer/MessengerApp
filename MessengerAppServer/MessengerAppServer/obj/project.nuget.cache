@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U0/eaM3SSPAk6ZBekL0Ov6fLXumShWq2BCR9SplgNQWTex99EAPME2OMZjQ2TPiJXIuoY8HnrSLFaWKPPpN5/g==",
+  "dgSpecHash": "lvcXeLsUjqAdRTd7DaMzmP7p3n+EgShyenCcDGEF77RcqqqweI0plHaoG78h5NrFKxbQCedmNLtToiAZ56rJlA==",
   "success": true,
-  "projectFilePath": "D:\\CProjects\\MessengerAppServer\\MessengerAppServer\\MessengerAppServer.csproj",
+  "projectFilePath": "D:\\UnityProjects\\MessengerApp\\MessengerAppServer\\MessengerAppServer\\MessengerAppServer.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

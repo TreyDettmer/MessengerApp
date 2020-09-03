@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CProjects\\MessengerAppServer\\MessengerAppServer\\MessengerAppServer.csproj",
+      "projectUniqueName": "D:\\UnityProjects\\MessengerApp\\MessengerAppServer\\MessengerAppServer\\MessengerAppServer.csproj",
       "projectName": "MessengerAppServer",
-      "projectPath": "D:\\CProjects\\MessengerAppServer\\MessengerAppServer\\MessengerAppServer.csproj",
+      "projectPath": "D:\\UnityProjects\\MessengerApp\\MessengerAppServer\\MessengerAppServer\\MessengerAppServer.csproj",
       "packagesPath": "C:\\Users\\thatc\\.nuget\\packages\\",
-      "outputPath": "D:\\CProjects\\MessengerAppServer\\MessengerAppServer\\obj\\",
+      "outputPath": "D:\\UnityProjects\\MessengerApp\\MessengerAppServer\\MessengerAppServer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\thatc\\AppData\\Roaming\\NuGet\\NuGet.Config",

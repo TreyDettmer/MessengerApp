@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Managages the chat screen UI
+/// </summary>
 public class MainManager : MonoBehaviour
 {
     public static MainManager instance;
@@ -13,6 +16,9 @@ public class MainManager : MonoBehaviour
     
     public List<GameObject> messageGameobjects = new List<GameObject>();
 
+    /// <summary>
+    /// Initialize singleton
+    /// </summary>
     private void Awake()
     {
         if (instance == null)
@@ -26,13 +32,7 @@ public class MainManager : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyUp(KeyCode.Return))
@@ -41,6 +41,9 @@ public class MainManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Send the typed message to the client.
+    /// </summary>
     public void SendMessageToChat()
     {
         if (messageInputField.text.Length > 0 && !string.IsNullOrWhiteSpace(messageInputField.text))
@@ -52,6 +55,12 @@ public class MainManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Add message to the chat.
+    /// </summary>
+    /// <param name="_id"></param>
+    /// <param name="_message"></param>
+    /// <param name="_chatter"></param>
     public void AddMessageToChatPanel(int _id, string _message, ChatterManager _chatter)
     {
         GameObject _messageObject = Instantiate(messageObject, chatPanel.transform);
@@ -70,7 +79,7 @@ public class MainManager : MonoBehaviour
             _messageObject.GetComponent<Text>().color = new Color(0.46f, 0f, 0f);
         }
         
-
+        //limit how many messages are in the chat
         if (messageGameobjects.Count >= maxMessages)
         {
 
@@ -82,12 +91,17 @@ public class MainManager : MonoBehaviour
         messageGameobjects.Add(_messageObject);
 
     }
-
+    /// <summary>
+    /// Tell client that we want to leave the chat
+    /// </summary>
     public void ClientLeaveChat()
     {
         Client.instance.LeaveChat();
     }
 
+    /// <summary>
+    /// Relist the usernames of the chatters in the lobby
+    /// </summary>
     public void UpdateLobbyPanel()
     {
         foreach  (Transform child in lobbyPanel.transform)

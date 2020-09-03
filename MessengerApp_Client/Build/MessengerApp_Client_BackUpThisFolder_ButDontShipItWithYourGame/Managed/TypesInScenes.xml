@@ -42,6 +42,7 @@
 		<type fullname="Client" preserve="nothing"/>
 		<type fullname="MainManager" preserve="nothing"/>
 		<type fullname="MainMenuManager" preserve="nothing"/>
+		<type fullname="QuitSceneScript" preserve="nothing"/>
 		<type fullname="ThreadManager" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.RenderPipelines.Core.Runtime">

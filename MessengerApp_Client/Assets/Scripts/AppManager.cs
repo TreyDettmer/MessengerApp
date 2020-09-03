@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Manages app on client
+/// </summary>
 public class AppManager : MonoBehaviour
 {
     public static AppManager instance;
@@ -11,6 +14,10 @@ public class AppManager : MonoBehaviour
     public GameObject chatterPrefab;
     public GameObject localChatterPrefab;
 
+
+    /// <summary>
+    /// Initialize singleton
+    /// </summary>
     private void Awake()
     {
         if (instance == null)
@@ -26,6 +33,11 @@ public class AppManager : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Creates a chatter instance withe the given id and username
+    /// </summary>
+    /// <param name="_id"></param>
+    /// <param name="_username"></param>
     public void AddChatter(int _id,string _username)
     {
         GameObject _chatter;
@@ -41,5 +53,10 @@ public class AppManager : MonoBehaviour
         _chatter.GetComponent<ChatterManager>().id = _id;
         _chatter.GetComponent<ChatterManager>().username = _username;
         chatters.Add(_id, _chatter.GetComponent<ChatterManager>());
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }

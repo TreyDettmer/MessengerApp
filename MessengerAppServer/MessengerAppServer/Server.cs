@@ -57,8 +57,7 @@ namespace MessengerAppServer
             packetHandlers = new Dictionary<int, PacketHandler>()
             {
                 {(int)ClientPackets.welcomeReceived,ServerHandle.WelcomeReceived },
-                {(int)ClientPackets.chatterMessage,ServerHandle.ChatterMessage},
-                {(int)ClientPackets.chatterLeftChat,ServerHandle.ChatterLeftChat},
+                {(int)ClientPackets.chatterMessage,ServerHandle.ChatterMessage}
 
             };
             Console.WriteLine("Initialized packets.");

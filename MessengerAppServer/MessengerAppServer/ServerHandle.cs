@@ -26,11 +26,5 @@ namespace MessengerAppServer
             Server.clients[_fromClient].chatter.SetMessage(_msg);
         }
 
-        public static void ChatterLeftChat(int _fromClient,Packet _packet)
-        {
-            int _id = _packet.ReadInt();
-            ServerSend.ChatterDisconnected(_id);
-            
-        }
     }
 }

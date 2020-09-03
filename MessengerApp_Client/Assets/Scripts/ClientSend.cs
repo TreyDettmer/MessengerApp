@@ -2,8 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Handles sending data to the server.
+/// </summary>
 public class ClientSend : MonoBehaviour
 {
+    /// <summary>
+    /// Sends TCP data to server
+    /// </summary>
+    /// <param name="_packet"></param>
     private static void SendTCPData(Packet _packet)
     {
         _packet.WriteLength();
@@ -12,6 +19,9 @@ public class ClientSend : MonoBehaviour
 
     #region Packets
 
+    /// <summary>
+    /// Send client info once we connect to server
+    /// </summary>
     public static void WelcomeReceived()
     {
         using (Packet _packet = new Packet((int)ClientPackets.welcomeReceived))
@@ -23,6 +33,10 @@ public class ClientSend : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Send a request to add a message to the chat
+    /// </summary>
+    /// <param name="msg"></param>
     public static void ChatterMessage(string msg)
     {
         using (Packet _packet = new Packet((int)ClientPackets.chatterMessage))
@@ -32,14 +46,7 @@ public class ClientSend : MonoBehaviour
         }
     }
 
-    public static void ChatterLeftChat(int _fromClient)
-    {
-        using (Packet _packet = new Packet((int)ClientPackets.chatterLeftChat))
-        {
-            _packet.Write(_fromClient);
-            SendTCPData(_packet);
-        }
-    }
+
 
     #endregion
 

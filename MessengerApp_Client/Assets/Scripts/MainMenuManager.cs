@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
+/// <summary>
+/// Managages the main menu UI
+/// </summary>
 public class MainMenuManager : MonoBehaviour
 {
     public static MainMenuManager instance;
@@ -14,6 +18,9 @@ public class MainMenuManager : MonoBehaviour
     public InputField portField;
     public static string errorMessage = "";
 
+    /// <summary>
+    /// Initialize singleton
+    /// </summary>
     private void Awake()
     {
         if (instance == null)
@@ -28,11 +35,16 @@ public class MainMenuManager : MonoBehaviour
         }
     }
 
+
     private void Start()
     {
+        // if there's an error message, display it.
         DisplayErrorMessage(errorMessage);
     }
 
+    /// <summary>
+    /// Ensure that all input fields are filled out, then tell the client to connect to the server.
+    /// </summary>
     public void ConnectToServer()
     {
         if (!string.IsNullOrWhiteSpace(ipAddressField.text) && !string.IsNullOrWhiteSpace(portField.text))
@@ -59,6 +71,10 @@ public class MainMenuManager : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Displays an error message to the screen.
+    /// </summary>
+    /// <param name="_msg"></param>
     public void DisplayErrorMessage(string _msg)
     {
         if (errorMessageObject != null)
@@ -71,6 +87,10 @@ public class MainMenuManager : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Remove the error message after 3 seconds.
+    /// </summary>
+    /// <returns></returns>
     IEnumerator ErrorMessageRoutine()
     {
         yield return new WaitForSeconds(3f);
