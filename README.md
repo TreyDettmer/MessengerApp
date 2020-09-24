@@ -1,6 +1,6 @@
 # MessengerApp
 
-This is a messenger application that I made in Unity. The application uses socket networking to connect players over multiple networks. 
+This is a messenger application that I made in Unity. The application uses socket networking. 
 
 ## Acknowledgement
 I owe a lot of credit to [Tom Weiland's YouTube series on C# networking](https://www.youtube.com/playlist?list=PLXkn83W0QkfnqsK8I0RAz5AbUxfg3bOQ5). I used his packet class as well as his base network solution for the networking in this application.
