@@ -1,6 +1,6 @@
 # MessengerApp
 
-This is a messenger application that I made in Unity.
+This is a chat room application that I made in Unity. Download the companion video call application [here.](https://github.com/TreyDettmer/WebcamChatApp)
 
 ## Acknowledgement
 I owe a lot of credit to [Tom Weiland's YouTube series on C# networking](https://www.youtube.com/playlist?list=PLXkn83W0QkfnqsK8I0RAz5AbUxfg3bOQ5). I used his packet class as well as his base network solution for the networking in this application.
